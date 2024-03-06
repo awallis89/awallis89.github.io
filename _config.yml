@@ -18,8 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Alexander Wallis
-email: alexander.wallis@haw.com
+title: Awesome title goes here
+author:
+  name: Alexander Wallis
+  email: alexander.wallis@haw-landshut.de
 description: >-
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -27,12 +29,29 @@ description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: http://awallis89.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  awallis89
 
 # Build settings
-theme: minima
+#theme: minima
+remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+
+# Link specific pages to the header navigation bar
+header_pages:
+  - about.md
+  - teaching.md
+  - research.md
+  - index.md
+
+minima:
+  skin: dark
+  # Items in the footer are defined here
+  social_links:
+    - { platform: github,         user_url: "https://github.com/awallis89" }
+    - { platform: linkedin,       user_url: "https://www.linkedin.com/in/jekyll" }
+    - { platform: google_scholar, user_url: "https://scholar.google.com/citations?user=qc6CJjYAAAAJ" }
 
 # Exclude from processing.
 # The following items will not be processed, by default.
